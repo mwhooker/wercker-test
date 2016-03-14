@@ -5,6 +5,8 @@ build:
   steps:
     - script:
         code: |
+          md5sum /pipeline/cache/testfile
+          stat /pipeline/cache/testfile
           dd if=/dev/zero of=/pipeline/cache/testfile  bs=1M  count=1500
           md5sum /pipeline/cache/testfile
           stat /pipeline/cache/testfile
